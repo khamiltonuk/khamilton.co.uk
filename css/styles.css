@@ -1,0 +1,155 @@
+/*&nbsp;&nbsp;&nbsp;html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)&nbsp;&nbsp;v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark&nbsp;&nbsp;html5doctor.com/html-5-reset-stylesheet/*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header,&nbsp;hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+margin:0;
+padding:0;
+border:0;
+outline:0;
+font-size:100%;
+vertical-align:baseline;
+background:transparent;
+}
+
+article, aside, figure, footer, header,
+hgroup, nav, section { display:block; }
+
+nav ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
+
+/* tables still need cellspacing="0" in the markup */
+table { border-collapse:collapse; border-spacing:0; }
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+input, select { vertical-align:middle; }
+/* END RESET CSS */
+
+/* maxvoltar.com/archive/-webkit-font-smoothing */
+html { -webkit-font-smoothing: antialiased; }
+
+a:hover, a:active { outline: none; }
+a, a:active, a:visited { color:#607890; }
+a:hover { color:#036; }
+
+/* bicubic resizing for non-native sized IMG:
+code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+body {
+	background: blue;
+	margin: 0;
+	font-family: 'Molengo', san-serif;
+}
+.centerwrap {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#navigation { list-style: none; padding: 0px; }
+#navigation li { float: left; display: block; padding: 0 30px;}
+#navigation li a { text-decoration: none;}
+
+.overlay { position: absolute;  width: 900px; padding: 0; top: 50%; left: 50%; margin-top: -75px; margin-left: -450px; min-height: 150px; list-style: none; background: #fff; }
+ul#quotes { position: relative;  padding: 0; margin: 0; list-style: none; }
+ul#quotes li { position:absolute; left:0; top:0;   width: 90%; padding: 20px; font-size: 2em;}
+ul#quotes li small { display: block; }
+
+/*---------------------------
+ARTWORK LIGHTBOX
+----------------------------*/
+#lightbox #wrapper ul li { padding: 0; }
+/* lightbox styles */
+#lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBg2AwQYAAAuAC01qHx9QAAAABJRU5ErkJggg==) repeat; }
+#lightbox img { max-width: 940px; }
+
+/* slideshow styles */
+#slideshow { width: 842px; height: 406px; background-color: #fff; border: 1px solid #222222; position: absolute; top: 50%; left: 50%; margin-left: -421px; margin-top: -203px;  }
+.slideshow-container { position: relative; width: 842px; height: 406px; z-index: 100; box-shadow: 0 0 20px rgba(0,0,0,0.4); }
+.slideshow-container ul{ list-style: none; padding: 0; margin: 0;}
+#slideshow ul > li { position: absolute; list-style: none; }
+.nav { display: none; }
+.prev, .next { position: absolute;  outline:0; top: 50%; background: url('http://static.ninewest.co.uk/media/content/nw/homepage/20130211-ss13/arrows.gif') #222222 no-repeat;  margin-top: -30px; text-indent: -9999em; width: 39px; height: 60px;  }
+.next { right: 0px; }
+.prev { left: 0px;   background-position: -39px 0; }
+
+ul#imageSet li{ float: left; margin: 0 0 20px 20px }
+ul#imageSet { margin: 0 auto; list-style: none; padding: 0;}
+
+#text { width: 822px; background: white; padding: 10px; margin: 0 auto; text-align: center; } 
+
+p.cross { position: absolute; margin: 0; z-index: 101; right: 0px; top: 0px; width: 30px; height: 30px;text-indent: -9999em; background: url('http://static.ninewest.co.uk/media/content/nw/homepage/20130211-ss13/cross.gif'); display: block; cursor: pointer;   }
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 960px) {
+	.centerwrap {
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+		padding: 10px;
+	}
+	.overlay{ 
+		width: 100%;
+		min-height: 150px;
+		left: 0;
+		margin-left: 0;
+	}
+}
+/*---------------------------
+GO BACK TO TOP
+----------------------------*/
+.go-top {
+	position: fixed;
+	bottom: 9em;
+	right: 2em;
+	text-decoration: none;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.3);
+	font-size: 12px;
+	padding: 1em;
+	display: none;
+}
+
+.go-top:hover {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+/*---------------------------
+FOOTER
+----------------------------*/
+footer {
+	width: 100%;
+	background: green;
+	padding: 10px 0;
+	position: fixed;
+	bottom: 0;
+}
+/*---------------------------
+CLEARFIX
+----------------------------*/
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
