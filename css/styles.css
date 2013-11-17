@@ -45,53 +45,49 @@ input, select { vertical-align:middle; }
 html { -webkit-font-smoothing: antialiased; }
 
 a:hover, a:active { outline: none; }
-a, a:active, a:visited { color:#607890; }
+a, a:active, a:visited { color:#000; text-decoration: none;}
 a:hover { color:#036; }
 
 /* bicubic resizing for non-native sized IMG:
 code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
 .ie7 img { -ms-interpolation-mode: bicubic; }
 body {
-	background: blue;
+	background: url(../images/960_grid_12_col_03.jpg) #efeade no-repeat top center;
 	margin: 0;
 	font-family: 'Molengo', san-serif;
+
 }
 .centerwrap {
 	width: 960px;
 	margin: 0 auto;
 }
-
+.content-block{
+	background: #faf8f3;
+	background: rgba(250,248,243,0.2);
+	padding: 10px;
+	float: left;
+	width: 400px;
+	min-height: 200px;
+	margin: 5px 10px 5px 0;
+}
+.intro{
+	font-size: 1.2em;
+}
 #navigation { list-style: none; padding: 0px; }
-#navigation li { float: left; display: block; padding: 0 30px;}
-#navigation li a { text-decoration: none;}
+#navigation li { float: left; display: block; padding: 10px 30px; background: #ac1600; margin: 0 2px 2px 0;}
+#navigation li  a { color:#efeade;}
+#navigation li.current.list {
+	display: none;
+}
+p a,
+p a:visited,
+p a:active {color:#ac1600;}
 
 .overlay { position: absolute;  width: 900px; padding: 0; top: 50%; left: 50%; margin-top: -75px; margin-left: -450px; min-height: 150px; list-style: none; background: #fff; }
 ul#quotes { position: relative;  padding: 0; margin: 0; list-style: none; }
 ul#quotes li { position:absolute; left:0; top:0;   width: 90%; padding: 20px; font-size: 2em;}
 ul#quotes li small { display: block; }
 
-/*---------------------------
-ARTWORK LIGHTBOX
-----------------------------*/
-#lightbox #wrapper ul li { padding: 0; }
-/* lightbox styles */
-#lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBg2AwQYAAAuAC01qHx9QAAAABJRU5ErkJggg==) repeat; }
-#lightbox img { max-width: 940px; }
-
-/* slideshow styles */
-#slideshow { width: 842px; height: 406px; background-color: #fff; border: 1px solid #222222; position: absolute; top: 50%; left: 50%; margin-left: -421px; margin-top: -203px;  }
-.slideshow-container { position: relative; width: 842px; height: 406px; z-index: 100; box-shadow: 0 0 20px rgba(0,0,0,0.4); }
-.slideshow-container ul{ list-style: none; padding: 0; margin: 0;}
-#slideshow ul > li { position: absolute; list-style: none; }
-.nav { display: none; }
-.prev, .next { position: absolute;  outline:0; top: 50%; background: url('http://static.ninewest.co.uk/media/content/nw/homepage/20130211-ss13/arrows.gif') #222222 no-repeat;  margin-top: -30px; text-indent: -9999em; width: 39px; height: 60px;  }
-.next { right: 0px; }
-.prev { left: 0px;   background-position: -39px 0; }
-
-ul#imageSet li{ float: left; margin: 0 0 20px 20px }
-ul#imageSet { margin: 0 auto; list-style: none; padding: 0;}
-
-#text { width: 822px; background: white; padding: 10px; margin: 0 auto; text-align: center; } 
 
 p.cross { position: absolute; margin: 0; z-index: 101; right: 0px; top: 0px; width: 30px; height: 30px;text-indent: -9999em; background: url('http://static.ninewest.co.uk/media/content/nw/homepage/20130211-ss13/cross.gif'); display: block; cursor: pointer;   }
 
@@ -99,10 +95,10 @@ p.cross { position: absolute; margin: 0; z-index: 101; right: 0px; top: 0px; wid
 @media only screen 
 and (max-width : 960px) {
 	.centerwrap {
-		width: 90%;
+		width: 100%;
 		margin: 0 auto;
 		text-align: center;
-		padding: 10px;
+		padding: 0;
 	}
 	.overlay{ 
 		width: 100%;
@@ -110,7 +106,77 @@ and (max-width : 960px) {
 		left: 0;
 		margin-left: 0;
 	}
+	#navigation {
+		margin: 0;
+		position: relative;
+	}
+	#navigation li.current.list {
+		position: absolute;
+		right: 10px;
+		height: 30px;
+		width: 50px;
+		display: block;
+		background: blue;
+	}
+	#navigation li { 
+		float: none;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+	#navigation li  a {
+		color:#efeade;
+	}
+	#navigation li:not(.current) {
+		display: none;
+	}
+	.content-block{
+		width: 90%;
+		background: none;
+		float: none;
+		margin:0 ;
+		padding: 0 5%;
+		height: auto;
+	}
+	footer {
+		width: 90%;
+		padding: 0 5%;
+	}
 }
+/*---------------------------
+Gallery
+----------------------------*/
+	/* lightbox styles */
+	#lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBg2AwQYAAAuAC01qHx9QAAAABJRU5ErkJggg==) repeat; }
+	#lightbox img { max-width: 940px; }
+
+	/* slideshow styles */
+
+	.nav { display: none; }
+	.prev, .next { position: absolute;  outline:0; top: 50%; background: url('http://static.ninewest.co.uk/media/content/nw/homepage/20130211-ss13/arrows.gif') #222222 no-repeat;  margin-top: -30px; text-indent: -9999em; width: 39px; height: 60px;  }
+	.next { right: 0px; }
+	.prev { left: 0px;   background-position: -39px 0; }
+
+	#imageSet li{ float: left; margin: 0 10px 10px 0 }
+	#imageSet { margin: 0 ; list-style: none; padding: 0;}
+	#imageSet img {
+		border: 5px solid #fff;
+	}
+	#imageSet a {
+		color: #efeade;
+		text-decoration: none; 
+		}
+	#imageSet a:hover img {
+		border: 5px solid #000;
+		border-width: 5px 5px 5px;	
+	}
+	#slideshow { width:622px; height: 406px; background-color: #fff; border: 1px solid #222222; position: absolute; top: 50%; left: 50%; margin-left: -311px; margin-top: -203px;  }
+	.slideshow-container { position: relative; width: 622px; height: 406px; z-index: 100; box-shadow: 0 0 20px rgba(0,0,0,0.4); }
+	.slideshow-container ul{ list-style: none; padding: 0; margin: 0;}
+	#slideshow ul > li { position: absolute; list-style: none; }
+	#text { width: 602px; background: white; padding: 10px; margin: 0 auto; text-align: center; } 
+
+	
 /*---------------------------
 GO BACK TO TOP
 ----------------------------*/
@@ -120,7 +186,7 @@ GO BACK TO TOP
 	right: 2em;
 	text-decoration: none;
 	color: white;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(172, 22, 0, 0.3);
 	font-size: 12px;
 	padding: 1em;
 	display: none;
@@ -134,14 +200,18 @@ FOOTER
 ----------------------------*/
 footer {
 	width: 100%;
-	background: green;
+	color: #efeade;
+	background: #ac1600;
 	padding: 10px 0;
-	position: fixed;
-	bottom: 0;
+}
+footer a {
+	color: #efeade;
 }
 /*---------------------------
 CLEARFIX
 ----------------------------*/
+footer:after,
+section:after,
 .clearfix:after {
 	visibility: hidden;
 	display: block;
@@ -150,6 +220,8 @@ CLEARFIX
 	clear: both;
 	height: 0;
 	}
-* html .clearfix             { zoom: 1; } /* IE6 */
+* html .clearfix,
+* html footer,
+* html section             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
