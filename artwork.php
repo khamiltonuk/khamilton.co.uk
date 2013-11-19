@@ -17,17 +17,7 @@
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	</head>
 	<body>
-		<div class="header">
-			<div class="centerwrap clearfix">
-				<a href="/"><h1>khamilton.co.uk</h1></a>
-				<p>est 2005</p>
-				<ul id="navigation">
-					<li><a href="/artwork.html">Artwork</a></li>
-					<li><a href="cv.html">Curriculum vitae</a></li>
-					<li><a class="last" href="#">Web development</a></li>
-				</ul>
-			</div>
-		</div>
+		<?php include "header.php"; ?>
         <section>
             <div class="centerwrap">
                 <div class="content-block">
@@ -54,18 +44,6 @@
                 </div>
             </div>
             </section>
-		<footer>
-			<div class="centerwrap">
-				<p>&copy; 2010 All images and logos copyright Kristian Hamilton, <a href="mailto:krisham87@yahoo" title="Email me">krisham87@yahoo.com</a></p>
-				<a href="#" class="go-top">Go Top</a>
-			</div>
-		</footer>
-
-		
-
-		<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script>!window.jQuery && document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
-		<script src="js/init.js"></script>
+		<?php include "footer.php"; ?>
 	</body>
 </html>
