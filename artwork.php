@@ -1,27 +1,9 @@
-<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
-<!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
-<!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
-<!--[if IE 9 ]>    <body class="ie9"> <![endif<]-->
-<!--[if (gt IE 9)|!(IE)]><!-->  <!--<![endif]-->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>khamilton.co.uk</title>
-		<link rel="shortcut icon" href="images/k.ico" type="image/x-icon" />
-		<link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
-		<link href='css/styles.css' rel='stylesheet' type='text/css'>
-		<!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-	</head>
-	<body>
+<?php $title = "Illustrations";?>
 		<?php include "header.php"; ?>
         <section>
             <div class="centerwrap">
                 <div class="content-block">
-                	<h1>Illustrations</h1>
+                	<h1><?php echo $title; ?></h1>
                     <p>I come from a fine art background, painting and drawing alot. After finishing sixth form college I completed a foundation degree at the Chelsea School of Art and Design, specialising in visual communication. During this time the main focus was producing a portfolio that focused on my ability to create visual solutions to visual problems using illustration and typography. For our final self initiated project, I made a website and havent stop since.</p>
                 </div>
                 <div class="content-block">
@@ -43,7 +25,7 @@
                     </ul>
                 </div>
             </div>
-            </section>
+        </section>
 		<?php include "footer.php"; ?>
 	</body>
 </html>

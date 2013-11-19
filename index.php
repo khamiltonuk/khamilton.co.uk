@@ -1,3 +1,4 @@
+		<?php $title = "Home";?>
 		<?php include "header.php"; ?>
 
 		<section>

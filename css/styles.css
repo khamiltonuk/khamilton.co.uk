@@ -88,6 +88,10 @@ ul#quotes { position: relative;  padding: 0; margin: 0; list-style: none; }
 ul#quotes li { position:absolute; left:0; top:0;   width: 90%; padding: 20px; font-size: 2em;}
 ul#quotes li small { display: block; }
 
+#menu {
+	display: none;
+	color: 
+}
 
 p.cross { position: absolute; margin: 0; z-index: 101; right: 0px; top: 0px; width: 30px; height: 30px;text-indent: -9999em; background: url('http://static.ninewest.co.uk/media/content/nw/homepage/20130211-ss13/cross.gif'); display: block; cursor: pointer;   }
 
@@ -110,25 +114,25 @@ and (max-width : 960px) {
 		margin: 0;
 		position: relative;
 	}
-	#navigation li.current.list {
-		position: absolute;
-		right: 10px;
-		height: 30px;
-		width: 50px;
-		display: block;
-		background: blue;
-	}
 	#navigation li { 
 		float: none;
 		width: 100%;
 		padding: 10px 0;
 		margin: 0;
+		display: none;
 	}
 	#navigation li  a {
 		color:#efeade;
 	}
-	#navigation li:not(.current) {
-		display: none;
+	#menu {
+		display: block;
+		text-rendering: geometricPrecision;
+		color: #efeade;
+		background: #ac1600;
+		width: 2em;
+		line-height: 1.5em;
+		font-size: 1.5em;
+		margin: 0 auto;
 	}
 	.content-block{
 		width: 90%;
@@ -136,7 +140,7 @@ and (max-width : 960px) {
 		float: none;
 		margin:0 ;
 		padding: 0 5%;
-		height: auto;
+		min-height: initial;
 	}
 	footer {
 		width: 90%;

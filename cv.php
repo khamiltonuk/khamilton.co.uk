@@ -1,5 +1,6 @@
-
+<?php $title = "CV";?>
 		<?php include "header.php"; ?>
+		<h1><?php echo $title; ?></h1>
 
 		<div class="overlay">
 		<ul id="quotes">
