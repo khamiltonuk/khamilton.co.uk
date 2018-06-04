@@ -1,0 +1,13 @@
+body,
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Molengo", san-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(./images/960_grid_12_col_03.jpg) #efeade no-repeat top center;
+}
